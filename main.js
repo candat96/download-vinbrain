@@ -1,5 +1,3 @@
-// SELECT study.* , bn."first_name", bn.pid, bn."date_of_birth", bn.gender FROM "study" as study
-// LEFT JOIN patient as bn on bn.patient_id = study.patient_id;
 const _ = require("lodash");
 const db = require('./db');
 const fs = require('fs');
@@ -7,18 +5,28 @@ const path = require('path');
 const axios = require('axios');
 const moment = require("moment");
 
-const getDataExport = async (page , limit = 20) => {
+const getDataExport = async (month, year) => {
     const sql = `
-        SELECT study.* , bn."first_name", bn.pid, bn."date_of_birth", bn.gender FROM "study" as study
-        LEFT JOIN patient as bn on bn.patient_id = study.patient_id
-        where study.captured_date between '2024-01-01' and '2025-12-31'
-        ORDER BY study.captured_date desc
-        LIMIT ${limit} OFFSET ${ page = 1 ? 0 :page * limit}
-    ;
-    `
+        select
+            s.* ,
+            bn."first_name",
+            bn.pid,
+            bn."date_of_birth",
+            bn.gender,
+            r.report_content
+        from "study" s
+        left join patient bn on bn.patient_id = s.patient_id
+        left join report r on r.study_id = s.study_id
+        where 
+            extract(month from s.captured_date) = ${month}
+            and extract(year from s.captured_date) = ${year}
+        order by s.captured_date desc;
+    `;
+
     const result = await db.query(sql);
     return result.rows;
 }
+
 async function downloadDicom(input) {
     const { url, name, folder } = input;
     try {
@@ -105,8 +113,11 @@ function translateGender(gender) {
     }
 }
 
-const main = async () => {
-    const rawData = await getDataExport(1);
+const formatDownloadFolderName = (month, year) => {
+    return `DOWNLOAD-THANG ${month.toString().padStart(2, '0')}-NAM ${year}`;
+}
+
+const handlePerUser = async (month, year, rawData) => {
     const groupDataByPatient = _.groupBy(rawData, 'patient_id');
 
     let data = []
@@ -128,7 +139,7 @@ const main = async () => {
     fs.writeFileSync('./data.json', JSON.stringify(data, null, 2)); 
 
     // Đảm bảo thư mục download tồn tại
-    const downloadDir = path.join('.', 'download');
+    const downloadDir = path.join('.', formatDownloadFolderName(month, year));
     if (!fs.existsSync(downloadDir)) {
         try {
             fs.mkdirSync(downloadDir, { recursive: true });
@@ -166,12 +177,21 @@ const main = async () => {
                 
                 // Chuyển đổi captured_date sang múi giờ +7
                 const formattedDate = formatCapturedDate(study.captured_date);
-                
+                const studyFolder = path.join(folderName, study.study_id);
+                if (!fs.existsSync(studyFolder)) {
+                    fs.mkdirSync(studyFolder, { recursive: true });
+                }
+
                 await downloadDicom({
                     url: dicomUrl,
                     name: `dicom_${study.study_id}_${formattedDate}.zip`,
-                    folder: folderName,
+                    folder: studyFolder,
                 });
+
+                if (study.report_content) {
+                    const reportContentPath = path.join(studyFolder, `report_${study.study_id}.json`);
+                    fs.writeFileSync(reportContentPath, JSON.stringify(study.report_content, null, 2));
+                }
             }
         } catch (err) {
             console.error(`Lỗi khi xử lý bệnh nhân ${item.patientId}:`, err);
@@ -201,4 +221,9 @@ const main = async () => {
     }
 }
 
-main();
+const main = async (month, year) => {
+    const data = await getDataExport(month, year);
+    await handlePerUser(month, year, data);
+}
+
+main(6, 2025);
