@@ -1,0 +1,72 @@
+{
+  "studyId": 6597183,
+  "version": 5,
+  "patientId": 4786189,
+  "studyInstanceUID": "2.25.21232846598752187687103599689762430102",
+  "status": "PENDING",
+  "aiStatus": null,
+  "note": null,
+  "additionalNote": null,
+  "qualified": null,
+  "capturedDate": 1748318074000,
+  "tenantCode": "PK_DK_5SAO_HN",
+  "doctorDecidedAt": null,
+  "doctorDecidedBy": null,
+  "reportedAt": 1748318237967,
+  "reportedBy": "x-quang@phongkham5sao.vn",
+  "editingBy": null,
+  "editingAt": null,
+  "series": [
+    {
+      "seriesId": 9774087,
+      "imageUrl": "https://api.draid.ai/dicom/studies/2.25.21232846598752187687103599689762430102/series/1.2.410.200028.100.2.202505271022480635.30755.1/instances/1.2.410.200028.100.3.20250527.1055290685.4452.1.1/frames/1/rendered?tenantCode=PK_DK_5SAO_HN",
+      "localImageUrl": "null/static/null",
+      "seriesInstanceUID": "1.2.410.200028.100.2.202505271022480635.30755.1",
+      "sopInstanceUID": "1.2.410.200028.100.3.20250527.1055290685.4452.1.1",
+      "modality": "DX",
+      "rawBodyPart": null,
+      "bodyPart": "CHEST",
+      "machineId": null,
+      "severity": null,
+      "referenced": false,
+      "note": null,
+      "doctorDecision": null,
+      "aiPrediction": null,
+      "specializedFinding": null,
+      "detailEntries": [
+        {
+          "code": "isLateral",
+          "value": "false"
+        },
+        {
+          "code": "unqualifiedAttributes",
+          "value": ""
+        },
+        {
+          "code": "viewPosition",
+          "value": "PA"
+        },
+        {
+          "code": "isChild",
+          "value": "false"
+        },
+        {
+          "code": "isChest",
+          "value": "true"
+        }
+      ],
+      "viewType": "",
+      "description": "CHEST PA",
+      "lastInstanceNumber": 0,
+      "instances": []
+    }
+  ],
+  "telediagnosisStatus": null,
+  "aiResult": null,
+  "doctorResult": null,
+  "aiNote": null,
+  "drNote": null,
+  "localMode": null,
+  "accessionNumber": "AN_d8cd43f",
+  "imagesInGallery": null
+}
