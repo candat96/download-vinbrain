@@ -20,7 +20,7 @@ const getDataExport = async (month, year) => {
         where 
             extract(month from s.captured_date) = ${month}
             and extract(year from s.captured_date) = ${year}
-        order by s.captured_date desc;
+        order by s.captured_date asc;
     `;
 
     const result = await db.query(sql);
