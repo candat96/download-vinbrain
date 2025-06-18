@@ -1,0 +1,41 @@
+{
+  "technique": null,
+  "note": null,
+  "items": [
+    {
+      "indication": "",
+      "language": "vi",
+      "comparisonInHtml": "",
+      "comparisonPrompt": null,
+      "findingsInHtml": "<ul><li>Kích thước bóng thận hai bên bình thường</li><li>Không thấy hình cản quang vị trí hệ tiết niệu trên film.</li><li>Sonde JJ hệ niệu&nbsp; bên (T), đầu tận trên ngang mức L1</li><li>Còn nhiều phân hơi trong ổ bụng, gây hạn chế khảo sát sỏi hệ niệu&nbsp;</li><li>Thoái hóa cột sống thắt lưng&nbsp;</li><li>Vẹo nhẹ cột sống thắt lưng sang (T)&nbsp;</li><li>Bất thường khác: không có</li></ul>",
+      "findingsPrompt": null,
+      "impressionInHtml": "<ul><li>Không thấy hình cản quang vị trí hệ tiết niệu trên film.\n</li><li>Sonde JJ hệ niệu  bên (T), đầu tận trên ngang mức L1\n</li><li>Còn nhiều phân hơi trong ổ bụng, gây hạn chế khảo sát sỏi hệ niệu \n</li><li>Thoái hóa cột sống thắt lưng \n</li><li>Vẹo nhẹ cột sống thắt lưng sang (T)&nbsp;</li></ul>",
+      "hasAIFindings": null,
+      "impressionPrompt": null,
+      "suggestionInHtml": null,
+      "comparison": [],
+      "findings": [
+        {
+          "section": "",
+          "descriptions": [
+            "Kích thước bóng thận hai bên bình thường",
+            "Không thấy hình cản quang vị trí hệ tiết niệu trên film.",
+            "Sonde JJ hệ niệu  bên (T), đầu tận trên ngang mức L1",
+            "Còn nhiều phân hơi trong ổ bụng, gây hạn chế khảo sát sỏi hệ niệu ",
+            "Thoái hóa cột sống thắt lưng ",
+            "Vẹo nhẹ cột sống thắt lưng sang (T) ",
+            "Bất thường khác: không có"
+          ]
+        }
+      ],
+      "impression": [
+        "Không thấy hình cản quang vị trí hệ tiết niệu trên film.\n",
+        "Sonde JJ hệ niệu  bên (T), đầu tận trên ngang mức L1\n",
+        "Còn nhiều phân hơi trong ổ bụng, gây hạn chế khảo sát sỏi hệ niệu \n",
+        "Thoái hóa cột sống thắt lưng \n",
+        "Vẹo nhẹ cột sống thắt lưng sang (T) "
+      ],
+      "suggestion": []
+    }
+  ]
+}

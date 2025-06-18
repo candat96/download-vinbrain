@@ -1,0 +1,46 @@
+{
+  "technique": "<p>CT ngực có tiêm thuốc</p>",
+  "note": null,
+  "items": [
+    {
+      "indication": "",
+      "language": "vi",
+      "comparisonInHtml": "",
+      "comparisonPrompt": null,
+      "findingsInHtml": "<p>-Nốt vùng đỉnh ở phân thùy S3 (T), bờ đa cung, kt # 8 x 6 x 7 mm (ngang x trước – sau x cao), không rõ bắt thuốc sau tiêm\n</p><p>-Nốt vôi nhỏ kèm khí thủng cận vách vùng đỉnh phổi (P) \n</p><p>-Dải xơ mỏng thùy giữa và đáy phổi (T)  \n</p><p>-Không thấy tổn thương màng phổi trên phim. \n</p><p>-Không thấy hạch lớn bất thường vùng trung thất trên phim.\n</p><p>-Các mạch máu lớn vùng trung thất: tĩnh mạch chủ trên, động mạch chủ ngực, các nhánh chính động mạch phổi và các tĩnh mạch phổi hai bên thấy được trên phim trong giới hạn bình thường. \n</p><p>-Không thấy tổn thương thành ngực. \n</p><p>-Không thấy bất thường đậm độ nhu mô gan trên phim.</p><p>\n</p><p>\n</p>",
+      "findingsPrompt": null,
+      "impressionInHtml": "<p>-Nốt vùng đỉnh ở phân thùy S3 (T) đã biết, không thay đổi nhiều về kích thước so với phim cũ. Đề nghị kết hợp lâm sàng đánh giá thêm.\n</p><p>-Nốt vôi nhỏ kèm khí thủng cận vách vùng đỉnh phổi (P)\n</p><p>-Dải xơ mỏng thùy giữa và đáy phổi (T)\n</p><p><br></p><p>\n</p><p>\n</p><p>\n</p>",
+      "hasAIFindings": null,
+      "impressionPrompt": null,
+      "suggestionInHtml": null,
+      "comparison": [],
+      "findings": [
+        {
+          "section": "",
+          "descriptions": [
+            "-Nốt vùng đỉnh ở phân thùy S3 (T), bờ đa cung, kt # 8 x 6 x 7 mm (ngang x trước – sau x cao), không rõ bắt thuốc sau tiêm\n",
+            "-Nốt vôi nhỏ kèm khí thủng cận vách vùng đỉnh phổi (P) \n",
+            "-Dải xơ mỏng thùy giữa và đáy phổi (T)  \n",
+            "-Không thấy tổn thương màng phổi trên phim. \n",
+            "-Không thấy hạch lớn bất thường vùng trung thất trên phim.\n",
+            "-Các mạch máu lớn vùng trung thất: tĩnh mạch chủ trên, động mạch chủ ngực, các nhánh chính động mạch phổi và các tĩnh mạch phổi hai bên thấy được trên phim trong giới hạn bình thường. \n",
+            "-Không thấy tổn thương thành ngực. \n",
+            "-Không thấy bất thường đậm độ nhu mô gan trên phim.",
+            "\n",
+            "\n"
+          ]
+        }
+      ],
+      "impression": [
+        "-Nốt vùng đỉnh ở phân thùy S3 (T) đã biết, không thay đổi nhiều về kích thước so với phim cũ. Đề nghị kết hợp lâm sàng đánh giá thêm.\n",
+        "-Nốt vôi nhỏ kèm khí thủng cận vách vùng đỉnh phổi (P)\n",
+        "-Dải xơ mỏng thùy giữa và đáy phổi (T)\n",
+        "",
+        "\n",
+        "\n",
+        "\n"
+      ],
+      "suggestion": []
+    }
+  ]
+}

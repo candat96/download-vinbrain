@@ -1,0 +1,39 @@
+{
+  "technique": null,
+  "note": null,
+  "items": [
+    {
+      "indication": "",
+      "language": "vi",
+      "comparisonInHtml": "",
+      "comparisonPrompt": null,
+      "findingsInHtml": "<ul><li>Kích thước bóng tim trong giới hạn bình thường.</li><li>Trung thất không rộng.</li><li>Hai phổi sáng đều, không thấy hình mờ bất thường.</li><li>Góc sườn hoành hai bên sáng, nhọn.</li><li>Không thấy tổn thương khung xương lồng ngực và phần mềm thành ngực.</li><li>Ống thông tĩnh mạch trung tâm, đầu tận ở khoảng buồng nhĩ (P)/ Tĩnh mạch chủ trên&nbsp;</li><li>Sonde JJ hệ niệu&nbsp; (T)&nbsp;</li></ul>",
+      "findingsPrompt": null,
+      "impressionInHtml": "<ul><li>Không thấy tổn thương nhu mô hai phổi&nbsp;&nbsp;</li><li>Ống thông tĩnh mạch trung tâm, đầu tận ở khoảng buồng nhĩ (P)/ Tĩnh mạch chủ trên \n</li><li>Sonde JJ hệ niệu  (T)&nbsp;</li></ul>",
+      "hasAIFindings": null,
+      "impressionPrompt": null,
+      "suggestionInHtml": null,
+      "comparison": [],
+      "findings": [
+        {
+          "section": "",
+          "descriptions": [
+            "Kích thước bóng tim trong giới hạn bình thường.",
+            "Trung thất không rộng.",
+            "Hai phổi sáng đều, không thấy hình mờ bất thường.",
+            "Góc sườn hoành hai bên sáng, nhọn.",
+            "Không thấy tổn thương khung xương lồng ngực và phần mềm thành ngực.",
+            "Ống thông tĩnh mạch trung tâm, đầu tận ở khoảng buồng nhĩ (P)/ Tĩnh mạch chủ trên ",
+            "Sonde JJ hệ niệu  (T) "
+          ]
+        }
+      ],
+      "impression": [
+        "Không thấy tổn thương nhu mô hai phổi  ",
+        "Ống thông tĩnh mạch trung tâm, đầu tận ở khoảng buồng nhĩ (P)/ Tĩnh mạch chủ trên \n",
+        "Sonde JJ hệ niệu  (T) "
+      ],
+      "suggestion": []
+    }
+  ]
+}

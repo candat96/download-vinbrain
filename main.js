@@ -151,9 +151,13 @@ const handlePerUser = async (month, year, rawData) => {
 
     // Mảng lưu trữ các lỗi xảy ra trong quá trình xử lý
     const errors = [];
-
+    console.log("Tổng số bệnh nhân: ", data.length);
+    let currentIndex = 0
     for (const item of data) {
         try {
+            
+            console.info("Đang xử lý bệnh nhân ====> " , currentIndex + 1 + "/" + data.length)
+            currentIndex = currentIndex + 1
             // Làm sạch các thành phần của tên thư mục
             const safePatientId = sanitizeFolderName(item.patientId);
             const safePatientName = sanitizeFolderName(item.patientName);
@@ -193,6 +197,9 @@ const handlePerUser = async (month, year, rawData) => {
                     fs.writeFileSync(reportContentPath, JSON.stringify(study.report_content, null, 2));
                 }
             }
+
+            console.log()
+            
         } catch (err) {
             console.error(`Lỗi khi xử lý bệnh nhân ${item.patientId}:`, err);
             
